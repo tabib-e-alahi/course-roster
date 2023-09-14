@@ -1,7 +1,7 @@
 
 import PropTypes from 'prop-types';
 
-const Course = ({course}) => {
+const Course = ({course,handleAddCourseInfo}) => {
 
     const {course_img,course_name,credit,price,course_details} = course;
     // console.log(course);
@@ -22,13 +22,14 @@ const Course = ({course}) => {
                     </p>
                 </div>
             </div>
-            <button className=' w-11/12 mx-auto  bg-[#2F80ED] py-2 rounded-lg text-white  absolute bottom-4 '>Select</button>
+            <button onClick={()=>handleAddCourseInfo(course_name,credit,price)} className=' w-11/12 mx-auto  bg-[#2F80ED] py-2 rounded-lg text-white  absolute bottom-4 '>Select</button>
         </div>
     );
 };
 
 Course.propTypes = {
-    course:PropTypes.object.isRequired
+    course:PropTypes.object.isRequired,
+    handleAddCourseInfo:PropTypes.func
 };
 
 export default Course;
