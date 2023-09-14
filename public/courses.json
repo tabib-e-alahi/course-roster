@@ -4,7 +4,7 @@
     "course_img": "https://i.ibb.co/FnLbT0n/Rectangle-2.png",
     "course_name": "Introduction to OOP Python",
     "credit": 3,
-    "price": 49,
+    "price": 200,
     "course_details": "Learn Python's Object-Oriented Programming principles for better software design and development in this comprehensive course."
   },
   {
@@ -12,7 +12,7 @@
     "course_img": "https://i.ibb.co/9g24RCM/Rectangle-2-1.png",
     "course_name": "Database (MySQL)",
     "credit": 4,
-    "price": 79,
+    "price": 790,
     "course_details": "Master MySQL database management, querying, and administration with a focus on practical applications."
   },
   {
@@ -20,7 +20,7 @@
     "course_img": "https://i.ibb.co/XtS3xvS/Rectangle-2-2.png",
     "course_name": "Introduction to C Programming",
     "credit": 5,
-    "price": 99,
+    "price": 990,
     "course_details": "Begin your programming journey with C language fundamentals and build a strong programming foundation."
   },
   {
@@ -28,7 +28,7 @@
     "course_img": "https://i.ibb.co/khdydfD/Rectangle-2-3.png",
     "course_name": "Introduction to Algorithms",
     "credit": 3,
-    "price": 59,
+    "price": 590,
     "course_details": "Explore essential algorithms and problem-solving techniques in this comprehensive introductory course."
   },
   {
@@ -36,7 +36,7 @@
     "course_img": "https://i.ibb.co/52Kkgqr/Rectangle-2-5.png",
     "course_name": "Introduction to C++ for DSA",
     "credit": 4,
-    "price": 89,
+    "price": 890,
     "course_details": "Learn C++ programming and its applications in Data Structures and Algorithms (DSA)."
   },
   {
@@ -44,7 +44,7 @@
     "course_img": "https://i.ibb.co/HnL7k5Z/Rectangle-2-6.png",
     "course_name": "Software Engineering",
     "credit": 5,
-    "price": 109,
+    "price": 1090,
     "course_details": "Gain expertise in software engineering principles, development methodologies, and project management in this comprehensive course."
   },
   {
@@ -52,7 +52,7 @@
     "course_img": "https://i.ibb.co/41NyKNJ/Rectangle-3.png",
     "course_name": "Problem-Solving Part",
     "credit": 3,
-    "price": 69,
+    "price": 690,
     "course_details": "Enhance your problem-solving skills for coding challenges and technical interviews with this hands-on course."
   },
   {
@@ -60,7 +60,7 @@
     "course_img": "https://i.ibb.co/GvfcMGT/Rectangle-3-1.png",
     "course_name": "Basic Data Structures",
     "credit": 2,
-    "price": 39,
+    "price": 390,
     "course_details": "Master fundamental data structures crucial for programming and software development success."
   },
   {
@@ -68,7 +68,7 @@
     "course_img": "https://i.ibb.co/mqFmMcT/Rectangle-2-4.png",
     "course_name": "AWS, Cloud Computing",
     "credit": 4,
-    "price": 79,
+    "price": 7900,
     "course_details": "Explore Amazon Web Services (AWS) and gain expertise in cloud computing, a vital skill in modern IT."
   }
 ]

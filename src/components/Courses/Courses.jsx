@@ -14,10 +14,16 @@ const Courses = () => {
         .then(data => setCourses(data))
     },[])
     return (
-        <div>
-            {
-                courses.map(course => <Course key={course.id} course = {course}></Course>)
-            }
+        <div className="w-11/12 mx-auto">
+            <div className=" lg:w-3/4 lg:gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    {
+                        courses.map(course => <Course key={course.id} course = {course}></Course>)
+                    }
+            </div>
+
+            <div className="w-1/3">
+
+            </div>
         </div>
     );
 };
