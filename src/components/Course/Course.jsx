@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+ import {FaDollarSign,FaBookOpen} from 'react-icons/fa'
+
 
 const Course = ({ course, handleAddCourseInfo }) => {
   const { course_img, course_name, credit, price, course_details } = course;
@@ -19,11 +21,12 @@ const Course = ({ course, handleAddCourseInfo }) => {
 
           <div className="flex justify-between items-center mb-4">
             <p className="flex items-center gap-3">
-              <img src="/src/assets/dollar-sign 1.png" alt="" />
+              {/* <img src={FaDollarSign}alt="" /> */}
+              <FaDollarSign className="text-zinc-500"></FaDollarSign>
               <span className="text-[#1C1B1B99] text-base">Price: {price}</span>
             </p>
             <p className="flex items-center gap-3">
-              <img src="/src/assets/Frame.png" alt="" />
+              <FaBookOpen className="text-zinc-500"></FaBookOpen>
               <span className="text-[#1C1B1B99] text-base">
                 Credit: {credit}hr
               </span>
