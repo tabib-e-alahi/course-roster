@@ -5,7 +5,7 @@ const Course = ({ course, handleAddCourseInfo }) => {
   // console.log(course);
   return (
     <div className="p-4 bg-[#FFF]  rounded-xl relative">
-      <div className="space-y-4 mb-20">
+      <div className="space-y-4 mb-24">
         <img
           className="w-full"
           src={course_img}
@@ -15,7 +15,7 @@ const Course = ({ course, handleAddCourseInfo }) => {
         <p className="h-20 text-[#1C1B1B99] text-sm font-normal">
           {course_details}
         </p>
-        <div className="absolute bottom-2 w-11/12 mx-auto">
+        <div className="absolute bottom-4 w-11/12 mx-auto">
 
           <div className="flex justify-between items-center mb-4">
             <p className="flex items-center gap-3">
