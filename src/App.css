@@ -5,3 +5,13 @@
     font-weight: bold;
     width: 100%;
 }
+
+@media screen and (max-width:576px) {
+    .tcustom{
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+       
+    }
+    
+}
