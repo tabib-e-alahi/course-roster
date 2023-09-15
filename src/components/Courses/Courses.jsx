@@ -4,9 +4,18 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Course from "../Course/Course";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Courses = ({notify}) => {
+
+    const handleCreditLimit = () => {
+        toast.error("You do not have enough credit", {
+          position: toast.POSITION.TOP_RIGHT,
+          className:'tcustom'
+        });
+      };
     
     const [courses, setCourses] = useState([]);
 
@@ -15,6 +24,8 @@ const Courses = ({notify}) => {
 
     const [credits,setCredits] = useState(0);
     const [remainingCredits,setRemainingCredits] = useState(20);
+
+    const [prices,setPrices] = useState(0);
 
     useEffect(()=>{
         fetch('courses.json')
@@ -31,6 +42,13 @@ const Courses = ({notify}) => {
                 return
             }
         }
+
+        const newCredit = credits + credit;
+        if(newCredit > 20){
+            handleCreditLimit()
+            return
+        }
+
         // setting course name 
         const newCourseName = [...courseName,course_name]
         setCourseName(newCourseName)
@@ -40,12 +58,15 @@ const Courses = ({notify}) => {
         console.log(count);
 
         //setting credit
-        const newCredit = credits + credit;
+        
         setCredits(newCredit)
 
         //setting remaining credits
         const newRemainingCredit = remainingCredits - credit;
         setRemainingCredits(newRemainingCredit)
+
+        //setting total price
+        setPrices(prices + price)
     }
     return (
         <div className="w-11/12 mx-auto md:flex gap-6">
@@ -55,20 +76,20 @@ const Courses = ({notify}) => {
                         courses.map(course => <Course key={course.id} course = {course} handleAddCourseInfo={handleAddCourseInfo}></Course>)
                     }
             </div>
-
+<ToastContainer></ToastContainer>
             <div className="w-1/4 p-6 h-1/3 bg-[#FFF]  rounded-xl">
-                    <h1 className="text-lg text-[#2F80ED] font-bold mb-4">Credit Hour Remaining {remainingCredits}hr</h1>
+                    <h1 className="text-lg text-[#2F80ED] font-bold mb-4">Credit Hour Remaining {remainingCredits} hr</h1>
                     <hr className="" />
-                    <h2 className="text-lg font-bold mb-4">Course Name: {courseName.length} </h2>
+                    <h2 className="text-lg font-bold mb-4">Course Name </h2>
                     <div className="mb-6">
                         {
                             courseName.map((cN,idx) => <h3 className="text-base text-[#1C1B1B99]" key={idx}>{idx+1} {cN}</h3>)
                         }
                     </div>
                     <hr />
-                    <p className="font-medium my-4">Total Credit Hour: {credits}hr </p>
+                    <p className="font-medium my-4">Total Credit Hour: {credits} </p>
                     <hr />
-                    <p className="font-semibold my-4">Total Price: </p>
+                    <p className="font-semibold my-4">Total Price: {prices} USD</p>
             </div>
         </div>
     );

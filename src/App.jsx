@@ -12,9 +12,7 @@ function App() {
     toast.error("You already have selected this course.", {
       position: toast.POSITION.TOP_RIGHT,
       className:'tcustom'
-
     });
-
   };
 
   return (
