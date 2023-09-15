@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const notify = () => {
-    toast.error("Error Notification !", {
+    toast.error("You already have selected this course.", {
       position: toast.POSITION.TOP_RIGHT,
       className:'tcustom'
 

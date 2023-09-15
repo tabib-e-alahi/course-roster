@@ -12,7 +12,9 @@ const Courses = ({notify}) => {
 
     const [courseName,setCourseName] = useState([]);
     const [count,setCount] = useState(0);
-    const [credit,setCredit] = useState(0);
+
+    const [credits,setCredits] = useState(0);
+    const [remainingCredits,setRemainingCredits] = useState(20);
 
     useEffect(()=>{
         fetch('courses.json')
@@ -29,12 +31,21 @@ const Courses = ({notify}) => {
                 return
             }
         }
+        // setting course name 
         const newCourseName = [...courseName,course_name]
         setCourseName(newCourseName)
 
         const newCount = count + 1;
         setCount(newCount)
-    console.log(count);
+        console.log(count);
+
+        //setting credit
+        const newCredit = credits + credit;
+        setCredits(newCredit)
+
+        //setting remaining credits
+        const newRemainingCredit = remainingCredits - credit;
+        setRemainingCredits(newRemainingCredit)
     }
     return (
         <div className="w-11/12 mx-auto md:flex gap-6">
@@ -46,7 +57,7 @@ const Courses = ({notify}) => {
             </div>
 
             <div className="w-1/4 p-6 h-1/3 bg-[#FFF]  rounded-xl">
-                    <h1 className="text-lg text-[#2F80ED] font-bold mb-4">Credit Hour Remaining 7 hr</h1>
+                    <h1 className="text-lg text-[#2F80ED] font-bold mb-4">Credit Hour Remaining {remainingCredits}hr</h1>
                     <hr className="" />
                     <h2 className="text-lg font-bold mb-4">Course Name: {courseName.length} </h2>
                     <div className="mb-6">
@@ -55,7 +66,7 @@ const Courses = ({notify}) => {
                         }
                     </div>
                     <hr />
-                    <p className="font-medium my-4">Total Credit Hour: </p>
+                    <p className="font-medium my-4">Total Credit Hour: {credits}hr </p>
                     <hr />
                     <p className="font-semibold my-4">Total Price: </p>
             </div>
