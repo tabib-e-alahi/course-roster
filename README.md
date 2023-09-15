@@ -1,8 +1,9 @@
-# React + Vite
+# Features
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+this website has the following 3 features:
 
-Currently, two official plugins are available:
+- Course selection: Users can browse and select their desire course .
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Course pricing: Users can view the  pricing for each course.
+
+- Credit hour tracking: Users can track their remaining credit hours and has a automatic credit tracking system.
