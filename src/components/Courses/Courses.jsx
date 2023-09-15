@@ -1,15 +1,18 @@
 
-// import PropTypes from 'prop-types';
-
+import PropTypes from 'prop-types';
 import { useEffect } from "react";
 import { useState } from "react";
 import Course from "../Course/Course";
 
-const Courses = () => {
+
+
+const Courses = ({notify}) => {
+    
     const [courses, setCourses] = useState([]);
 
     const [courseName,setCourseName] = useState([]);
     const [count,setCount] = useState(0);
+    const [credit,setCredit] = useState(0);
 
     useEffect(()=>{
         fetch('courses.json')
@@ -22,8 +25,7 @@ const Courses = () => {
        
         for(const coN of courseName){
             if(coN === course_name){
-                alert('Multiple data are not allowed');
-                
+                notify()
                 return
             }
         }
@@ -36,6 +38,7 @@ const Courses = () => {
     }
     return (
         <div className="w-11/12 mx-auto md:flex gap-6">
+            
             <div className=" lg:w-3/4 gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     {
                         courses.map(course => <Course key={course.id} course = {course} handleAddCourseInfo={handleAddCourseInfo}></Course>)
@@ -60,8 +63,8 @@ const Courses = () => {
     );
 };
 
-// Courses.propTypes = {
-    
-// };
+Courses.propTypes = {
+    notify:PropTypes.func
+};
 
 export default Courses;
